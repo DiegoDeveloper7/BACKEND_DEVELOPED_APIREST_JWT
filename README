@@ -1,0 +1,59 @@
+Este proyecto corresponde a una API REST desarrollada en Node.js utilizando Express, cuyo propósito es gestionar usuarios con autenticación basada en JSON Web Tokens (JWT).
+
+La aplicación permite:
+	•	Registro de usuarios
+	•	Autenticación mediante login
+	•	Acceso protegido a datos de usuario
+	•	Validación de credenciales
+	•	Encriptación segura de contraseñas
+
+Tecnologías Utilizadas
+	•	Node.js
+	•	Express
+	•	PostgreSQL
+	•	pg (Pool de conexiones)
+	•	bcryptjs (encriptación de contraseñas)
+	•	jsonwebtoken (autenticación JWT)
+	•	dotenv (variables de entorno)
+	•	cors
+	•	morgan   
+
+Seguridad Implementada
+
+1️⃣ Encriptación de Contraseñas
+
+Las contraseñas son hasheadas utilizando bcrypt antes de ser almacenadas en la base de datos.
+
+2️⃣ Validación de Password
+
+Se implementa una validación mediante expresión regular que exige:
+	•	Entre 6 y 10 caracteres
+	•	Al menos una letra mayúscula
+	•	Al menos un número
+	•	Al menos un carácter especial
+
+3️⃣ Autenticación JWT
+
+Al iniciar sesión correctamente:
+	•	Se genera un token JWT firmado con una clave secreta
+	•	El token tiene una expiración de 1 hora
+	•	Las rutas protegidas requieren el token en el header Authorization
+
+ Endpoints Disponibles
+
+POST /usuarios
+
+Registra un nuevo usuario.
+
+Requiere:
+	•	email
+	•	password
+	•	rol
+	•	lenguage
+
+Devuelve:
+	•	201 Created si el registro es exitoso
+	•	400 si el email ya existe o faltan datos
+
+
+DESAROLLADO POR ING. DIEGO ALFONZO GOZALEZ GONZALEZ.
