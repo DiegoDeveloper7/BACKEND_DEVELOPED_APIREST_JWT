@@ -20,11 +20,11 @@ Tecnologías Utilizadas
 
 Seguridad Implementada
 
-1️⃣ Encriptación de Contraseñas
+Encriptación de Contraseñas
 
 Las contraseñas son hasheadas utilizando bcrypt antes de ser almacenadas en la base de datos.
 
-2️⃣ Validación de Password
+Validación de Password
 
 Se implementa una validación mediante expresión regular que exige:
 	•	Entre 6 y 10 caracteres
@@ -32,7 +32,7 @@ Se implementa una validación mediante expresión regular que exige:
 	•	Al menos un número
 	•	Al menos un carácter especial
 
-3️⃣ Autenticación JWT
+Autenticación JWT
 
 Al iniciar sesión correctamente:
 	•	Se genera un token JWT firmado con una clave secreta
